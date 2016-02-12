@@ -72,8 +72,9 @@
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <button class="button small ">Save</button>
-                    <button class="button small alert float-right">Delete</button>
+                    <button class="button small" ng-click="save()" ng-disabled="editor.$invalid">Save</button>
+                    <button class="button small alert float-right" ng-click="remove()" ng-if="content.id">Delete</button>
+
                 </div>
             </form>
         </div>
