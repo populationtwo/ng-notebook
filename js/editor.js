@@ -3,10 +3,14 @@ angular
     .controller('EditorController', EditorController);
 
 
-function EditorController($scope) {
+function EditorController($scope, $http) {
     $scope.editing = true;
 
-    /*$scope.state = {
-        editing: false
-    };*/
+    $http.get('/notes').success(function (data) {
+        $scope.notes = data;
+    }).error(function (err) {
+        $scope.error = "Could not load notes";
+
+    })
+
 }

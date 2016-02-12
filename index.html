@@ -29,12 +29,11 @@
             </div>
 
             <div class="panel-body">
-                <p>No notes</p>
-                <ul class="list-group">
-                    <li class="list-group-item"><br/>
-                        <small></small>
-                    </li>
-                </ul>
+                <p ng-if="!notes.length">No notes</p>
+                <div class="callout" ng-repeat="note in notes">
+                    {{note.title}}<br/>
+                    <small>{{note.date | date:'short'}}</small>
+                </div>
             </div>
 
 
