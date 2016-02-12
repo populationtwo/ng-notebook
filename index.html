@@ -44,7 +44,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">{{content.title}}  <button class="hollow button secondary small float-right">Edit</button></h3>
                 </div>
-                <div class="panel-body">{{content.content}}</div>
+                <div class="panel-body" markdown="{{content.content}}"></div>
                 <div class="panel-footer">{{content.date | date:'short'}}</div>
             </div>
 
